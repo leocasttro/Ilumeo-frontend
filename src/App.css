@@ -1,24 +1,12 @@
 .App {
-  /* Remove text-align: center; pois o align-items: center no body já centraliza o App */
-  /* text-align: center; */
-
-  /* Define a largura para 35% da largura da viewport */
   width: 35vw;
-  margin: 0 auto; /* Centraliza o App horizontalmente na tela */
-  /* Define uma altura mínima para garantir que o conteúdo seja visível e ocupe um bom espaço */
-  min-height: 60vh; /* Aumentado para dar mais espaço vertical */
-
-  /* As propriedades abaixo são importantes para o layout interno do App e para o box-model */
-  padding: 15px; /* Aumentado o padding para dar mais espaço interno */
-  box-sizing: border-box; /* Garante que o padding seja incluído na largura e altura totais */
-
-  /* Propriedades Flexbox para centralizar o conteúdo DENTRO do .App */
+  margin: 0 auto; 
+  min-height: 60vh; 
+  padding: 15px; 
+  box-sizing: border-box; 
   display: flex;
-  flex-direction: column; /* Organiza os itens internos verticalmente (Header, TimeRegister, etc.) */
-  justify-content: flex-start; /* Alinha o conteúdo ao topo do App, ou use 'center' se quiser tudo centralizado */
-  align-items: center; /* Centraliza o conteúdo horizontalmente dentro do App */
-
-  /* Adicione um background ao App se quiser que ele se destaque do fundo do body */
-  border-radius: 8px; /* Cantos arredondados para um visual mais suave */
-
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: center; 
+  border-radius: 8px;
 }

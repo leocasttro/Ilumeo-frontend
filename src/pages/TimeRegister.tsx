@@ -4,22 +4,7 @@ import { PointRecord } from '../types/PointRecord';
 import Timer from '../components/Timer';
 import Header from '../components/Header';
 import HistoryList from '../components/HistoryList';
-import styled from 'styled-components';
-import { TimeButton } from '../components/TimeButton';
-
-const FullButton = styled.button`
-  width: 100%;
-  padding: 1rem;
-  font-size: 1.25rem;
-  font-weight: bold;
-  background-color: #FE8A00;
-  color: #151F2B;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-
-`;
+import { ActionButton } from '../components/ActionButton';
 
 export const TimeRegister: React.FC = () => {
   const [records, setRecords] = useState<PointRecord[]>([]);
@@ -64,10 +49,10 @@ export const TimeRegister: React.FC = () => {
       <Header />
       <Timer isrunning={isTimerRunning} />
       
-      <TimeButton
+      <ActionButton
+        label={isTimerRunning ? 'Registrar Saída' : 'Registrar Entrada'}
         onClick={handleClick}
-        isTimerRunning={isTimerRunning}
-        setIsTimerRunning={setIsTimerRunning}
+        disabled={loading || records.length === 0}
       />
 
     <HistoryList records={records} />    
