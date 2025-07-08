@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
+import { formatTime } from "../util/timeUtil";
 
 interface TimeProps {
   isrunning: boolean;
@@ -10,7 +11,8 @@ const TimerWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: right;
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
+  width: 100%;
 `;
 
 const TimeDisplay = styled.div`
@@ -38,17 +40,11 @@ const Timer: React.FC<TimeProps> = ({ isrunning, onStop }) => {
     } else if (!isrunning && elapsedSeconds > 0) {
       if (onStop) onStop(elapsedSeconds);
       clearInterval(interval!);
+      setElapsedSeconds(0);
     }
 
     return () => clearInterval(interval!);
   }, [isrunning]);
-
-  const formatTime = (seconds: number) => {
-    const hrs = Math.floor(seconds / 3600);
-    const mins = Math.floor((seconds % 3600) / 60);
-    // Sem segundos, como você pediu
-    return `${hrs}h ${mins}m`;
-  };
 
   return (
     <TimerWrapper>

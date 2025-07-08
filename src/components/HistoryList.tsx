@@ -15,15 +15,19 @@ const ListItem = styled.li`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 1rem;
   margin-bottom: 8px;
   color: #CFCFCF;
   list-style: none;
   font-size: 0.95rem;
-`;
+  width: 100%;
+  padding: 1rem 0;
+  
+  span {
+    margin: 0 1rem;`;
 
 const HistoryListWrapper = styled.div`
   margin-top: 2rem;
+  width: 100%;
 
   h2 {
     color: #F5F5F5;

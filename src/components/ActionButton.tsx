@@ -8,7 +8,7 @@ interface ActionButtonProps {
 }
 
 const Button = styled.button`
-  width: 108%;
+  width: 100%;
   padding: 1rem;
   font-size: 1.25rem;
   font-weight: bold;

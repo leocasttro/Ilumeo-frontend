@@ -4,11 +4,11 @@ import styled from 'styled-components';
 const StyledHeader = styled.header`
   color: white;
   padding: 1.5rem 0rem;
-
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   height: 100%;
+  width: 100%;
 `;
 
 const Title = styled.h1`
@@ -38,13 +38,13 @@ const UserInfoContainer = styled.div`
 `;
 
 
-const Header: React.FC = () => {
+const Header: React.FC<{ code: string }> = ({ code }) => {
   return (
     <StyledHeader>
       <Title>Relógio de ponto</Title>
       
       <UserInfoContainer>
-        <UserName>Leonardo</UserName>
+        <UserName>#{code}</UserName>
         <UserLabel>Usuário</UserLabel>
       </UserInfoContainer>
     </StyledHeader>
