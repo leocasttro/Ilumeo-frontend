@@ -69,9 +69,6 @@ const StyledInputContainer = styled.div`
   border-radius: 4px;
   border: none;
 
-  @media (max-width: 600px) {
-    padding: 1.2rem 0.8rem 0.4rem 0.8rem;
-  }
 `;
 
 const StyledInnerInput = styled.input<{ hasContent: boolean }>`

@@ -16,6 +16,9 @@ const CenteredContainer = styled.div`
   padding-top: 5rem; 
   width: 35%;
   margin: 0 auto; 
+    @media (max-width: 600px) {
+    width: 90%;
+  }
 `;
 
 
